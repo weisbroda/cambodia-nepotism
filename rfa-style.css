@@ -1,0 +1,179 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@font-face {
+	font-family: 'GI';
+	src: url('../fonts/gi-bold-web.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GI';
+	src: url('../fonts/gi-regular-web.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+html,
+body {
+  font-family: 'Noto Serif', sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  background-size: cover;  
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 5px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 575px) {
+  figcaption {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  color: #d38149;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #ab4a39;
+  outline: 0;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 575px) {
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+}
+
+
+h1 {
+  font-size: 4em;
+  font-family: 'Merriweather Sans', sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 1em;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 575px) {
+  h2 {
+    font-size: 3em;
+    padding: 30px 0 10px;
+  }
+}
+
+h4 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 2em;
+  line-height: 1.5;
+  text-align: center;
+  padding: 30px 0 50px;
+}
+
+@media screen and (max-width: 575px) {
+  h4 {
+    font-size: 2em;
+    line-height: 1.5;
+    text-align: center;
+    padding: 30px 0 50px;
+  }
+}
+
+h5 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  padding: 20px 0 20px;
+}
+
+@media screen and (max-width: 575px) {
+  h5 {
+    font-size: 2.2em;
+    line-height: 1.5;
+    padding: 50px 0 20px 0;
+  }
+}
+
+hr {
+  border: 0px;
+  height: 1px;
+}
+
+
+section {
+  width: 100%;
+  height: auto;
+  background-size: cover;  
+  padding: 25px 0 35px;
+}
+
+.container {
+  padding: 25px 0 35px;
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 0 20px 25px 30px;
+  }
+}
+
+.parallax-container {
+  height: 100vh;
+  width: 100%;
+}
+
+pre {
+  overflow: auto;
+}
+
+pre code {
+  word-wrap: normal;
+  white-space: pre;
+}
+
+footer {
+  background: #000;
+  color: #ddd;
+  padding: 30px 0 30px;
+  text-align: center;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #eee;
+  text-decoration: underline;
+}

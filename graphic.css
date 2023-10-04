@@ -1,0 +1,171 @@
+.constraint {
+    height: 130%;
+    width: 100%;
+}
+
+@media screen and (max-width: 575px) {
+    .constraint {
+        padding-bottom: calc(10em + 55vw);
+    }
+}
+
+.red-thread {
+    stroke-width: 3px;
+    stroke: #c33;
+    fill: none;
+  }
+  
+  .red-thread-company {
+    stroke: #c33;
+    opacity: 0.5;
+  }
+  
+  .default-circle, .default-square, .default-connection {
+    fill: none;
+    stroke-width: 0.5px;
+    stroke: black;
+  }
+  
+  #dotted-line {
+    stroke-width: 0.5;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-dasharray: 0 0 0 2;
+  }
+  
+  .dpm-circle {
+    fill: #243e90;
+    stroke: none;
+  }
+  
+  .manet-circle {
+    fill: #c33;
+  }
+  
+  .govt-circle {
+    fill: #54a4c6;;
+  }
+  
+  .clans-circle {
+    fill: #54a4c6;;
+    opacity: 0.25;
+  }
+  
+  .company-red {
+    fill:#c33;
+    opacity: 0.25;
+  }
+  
+  .company-red-stroke {
+    fill: none;
+    stroke-width: 0.5px;
+    stroke: #c33;
+  }
+  
+  .company-grey {
+    fill: #bcbec0;
+    stroke: #bcbec0;
+    stroke-width: 1px;
+    fill-opacity: 0.25;
+  }
+  
+  .company-grey-stroke {
+    fill: none;
+    stroke-width: 0.5px;
+    stroke: #bcbec0;
+  }
+  
+  .clan-name {
+    font-family: NotoSans-Bold, "Noto Sans";
+    font-weight: 700;
+    font-size: 6px;
+    fill: black;
+  }
+  
+  .company-name {
+    font-family: NotoSans-Italic, "Noto Sans";
+    font-style: italic;
+    font-size: 6px;
+    fill: #bcbec0;
+  }
+  
+  .company-name-red {
+    font-family: NotoSans-Italic, "Noto Sans";
+    font-style: italic;
+    font-size: 6px;
+    fill:#c33;
+    opacity: 0.5;
+  }
+  .person-name-black {
+    font-family: NotoSans-Regular, "Noto Sans";
+    font-size: 5px;
+    fill: black;
+  }
+  
+  .person-name-white {
+    font-family: NotoSans-Regular, "Noto Sans";
+    font-size: 5px;
+    fill: white;
+  }
+  
+  #hun-manet-name {
+    font-family: NotoSans-Regular, "Noto Sans";
+    font-size: 13px;
+    fill: white;
+  }
+
+  /* PORTRAIT STYLES */
+  .portrait {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin: 5%;
+
+  }
+  
+  .manet-manith-portrait {
+    width: 50px;
+    height: 50px;
+    background-color: #c33;
+    border-radius:50%;
+  }
+
+  .default-portrait {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius:50%;
+    box-shadow: 0 0 0 1px black;
+  }
+
+  .name {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    font-style: normal;
+    text-align: center;
+    display: block;
+  }
+
+  .title, #key-text {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: small;
+    font-style: normal;
+    margin-top: -12px;
+    display: block;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  #key{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: -80px;
+  }
+
+  #key-text {
+    text-align: left;
+  }

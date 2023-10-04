@@ -294,25 +294,11 @@
 .graphic-element {
     transition: 2s all ease;
     scale: 1;
-    transform-origin: 0px -160px 0px;
 
   }
 
 .graphic-element.zoom {
     scale: 1.75;
-}
-
-.graphic-element.secTwoPan {
-    background-color: white;
-    animation: secTwoPan 0.5s all ease;
-    transform: translate(0,0);
-}
-
-@keyframes secTwoPan {
-    100% {
-        transform: translate(1000px,1000px);
-        background-color: blue;
-    }
 }
 
 .sec1 {

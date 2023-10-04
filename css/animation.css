@@ -1,0 +1,385 @@
+/* ON LOAD GRAPHIC TRANSITION IN ANIMATION */
+.g-fixed-graphic {
+    opacity: 0%;
+    margin-top: 500px;
+    animation: move-up 1s forwards;
+} 
+
+/* ON LOAD INTRO TEXT BOX ANIMATION */
+#intro-box-in {
+    opacity: 0%;
+    margin-top: 100px;
+    animation: move-up 0.5s linear 5s forwards;
+}
+
+@keyframes move-up { 
+    100% {
+        margin-top: 0px;
+        opacity: 100%;
+    }
+} 
+
+
+
+
+/* ON LOAD RED THREAD ANIMATION */
+#thread1,
+#thread2,
+#thread3,
+#thread4,
+#thread5,
+#thread6,
+#thread7,
+#thread8,
+
+#thread11,
+#thread12,
+#thread13,
+#thread14,
+#thread15,
+#thread16,
+#thread17,
+#thread18,
+#thread19,
+#thread20,
+#thread21,
+#thread22,
+#thread23,
+
+#thread25,
+
+#thread28,
+#thread29,
+#thread30,
+#thread31,
+#thread32 {
+    fill: none;
+    stroke-width: 0.5px;
+    stroke: black;
+}
+
+/* company bkgd red threads init style */
+#thread9,
+#thread10,
+#thread14-2,
+#thread24,
+#thread26,
+#thread27 {
+    fill: #bcbec0;
+    stroke: #bcbec0;
+    stroke-width: 1px;
+    fill-opacity: 0.25;
+}
+
+/* company names & lines red thread init style */
+#baitang-name, #sfGroup-name, #camFB-name, #sokimex-name, #camPowTrans-name, #everfortune-name, #technovage-name {
+    fill: #bcbec0;
+}
+
+#baitang-line, #sfGroup-line, #camFB-line, #sokimex-line, #camPowTrans-line, #everfortune-line, #technovage-line {
+    stroke: #bcbec0
+}
+
+
+/* begin animation specs */
+#thread1 {
+    animation: red-thread-in 0.2s linear 1.5s forwards;
+}
+
+#thread2 {
+    animation: red-thread-in 0.2s linear 1.6s forwards;
+}
+
+#thread3 {
+    animation: red-thread-in 0.2s linear 1.7s forwards;
+}
+
+#thread4 {
+    animation: red-thread-in 0.2s linear 1.8s forwards;
+}
+
+#thread5 {
+    animation: red-thread-in 0.2s linear 1.9s forwards;
+}
+
+#thread6 {
+    animation: red-thread-in 0.2s linear 2s forwards;
+}
+
+#thread7 {
+    animation: red-thread-in 0.2s linear 2.1s forwards;
+}
+
+#thread8 {
+    animation: red-thread-in 0.2s linear 2.2s forwards;
+}
+
+/* BAITANG KAMPUCHEA PLC */
+#thread9 {
+    animation: comp-red-thread-in 0.2s linear 2.3s forwards;
+}
+
+#baitang-name {
+    animation: comp-red-name-in 0.2s linear 2.3s forwards;
+}
+
+#baitang-line {
+    animation: comp-red-line-in 0.2s linear 2.3s forwards;
+}
+
+/* SF GROUP LTD */
+#thread10 {
+    animation: comp-red-thread-in 0.2s linear 2.4s forwards;
+}
+
+#thread11 {
+    animation: red-thread-in 0.2s linear 2.5s forwards;
+}
+
+#thread12 {
+    animation: red-thread-in 0.2s linear 2.6s forwards;
+}
+
+#thread13 {
+    animation: red-thread-in 0.2s linear 2.7s forwards;
+}
+
+#thread14-1 {
+    animation: red-thread-in 0.2s linear 2.8s forwards;
+}
+
+/* CAM F & B */
+#thread14-2 {
+    animation: comp-red-thread-in 0.2s linear 2.8s forwards;
+}
+
+#thread15 {
+    animation: red-thread-in 0.2s linear 2.9s forwards;
+}
+
+#thread16 {
+    animation: red-thread-in 0.2s linear 3s forwards;
+}
+
+#thread17 {
+    animation: red-thread-in 0.2s linear 3.1s forwards;
+}
+
+#thread18 {
+    animation: red-thread-in 0.2s linear 3.2s forwards;
+}
+
+#thread19 {
+    animation: red-thread-in 0.2s linear 3.3s forwards;
+}
+
+#thread20 {
+    animation: red-thread-in 0.2s linear 3.4s forwards;
+}
+
+#thread21 {
+    animation: red-thread-in 0.2s linear 3.5s forwards;
+}
+
+#thread22 {
+    animation: red-thread-in 0.2s linear 3.6s forwards;
+}
+
+#thread23 {
+    animation: red-thread-in 0.2s linear 3.7s forwards;
+}
+
+/* SOKIMEX */
+#thread24 {
+    animation: comp-red-thread-in 0.2s linear 3.8s forwards;
+}
+
+#sokimex-name {
+    animation: comp-red-name-in 0.2s linear 3.8s forwards;
+}
+
+#sokimex-line {
+    animation: comp-red-line-in 0.2s linear 3.8s forwards;
+}
+
+#thread25 {
+    animation: red-thread-in 0.2s linear 3.9s forwards;
+}
+
+/* CAMBODIa POWER TRANSMISSION */
+#thread26 {
+    animation: comp-red-thread-in 0.2s linear 4s forwards;
+}
+
+#camPowTrans-name {
+    animation: comp-red-name-in 0.2s linear 4s forwards;
+}
+
+#camPowTrans-line {
+    animation: comp-red-line-in 0.2s linear 4s forwards;
+}
+
+/* EVERFORTUNE */
+#thread27 {
+    animation: comp-red-thread-in 0.2s linear 4.1s forwards;
+}
+
+#everfortune-name {
+    animation: comp-red-name-in 0.2s linear 4.1s forwards;
+}
+
+#everfortune-line {
+    animation: comp-red-line-in 0.2s linear 4.1s forwards;
+}
+
+/* TECHNOVAGE */
+#thread28 {
+    animation: comp-red-thread-in 0.2s linear 4.2s forwards;
+}
+
+#technovage-name {
+    animation: comp-red-name-in 0.2s linear 4.2s forwards;
+}
+
+#technovage-line {
+    animation: comp-red-line-in 0.2s linear 4.2s forwards;
+}
+
+#thread29 {
+    animation: red-thread-in 0.2s linear 4.3s forwards;
+}
+
+#thread30 {
+    animation: red-thread-in 0.2s linear 4.4s forwards;
+}
+
+#thread31 {
+    animation: red-thread-in 0.2s linear 4.5s forwards;
+}
+
+#thread32 {
+    animation: red-thread-in 0.2s linear 4.6s forwards;
+}
+
+@keyframes red-thread-in {
+    100% {
+        stroke-width: 3px;
+        stroke: #c33;
+        fill: none;
+    }
+}
+
+@keyframes comp-red-thread-in {
+    100% {
+        fill:#c33;
+        stroke-width: 0;
+    }
+}
+
+@keyframes comp-red-name-in {
+    100% {
+        fill: #c33;
+    }
+}
+
+@keyframes comp-red-line-in {
+    100% {
+        stroke: #c33;
+    }
+}
+
+/* SECTION TRANSITIONS */
+
+
+.graphic-element {
+    transition: 2s all ease;
+    scale: 1;
+    transform-origin: 0px -160px 0px;
+
+  }
+
+.graphic-element.zoom {
+    scale: 1.75;
+}
+
+.graphic-element.secTwoPan {
+    background-color: white;
+    animation: secTwoPan 0.5s all ease;
+    transform: translate(0,0);
+}
+
+@keyframes secTwoPan {
+    100% {
+        transform: translate(1000px,1000px);
+        background-color: blue;
+    }
+}
+
+.sec1 {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.sec1.transition {
+    opacity: 0.4;
+}
+
+.sec2 {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.sec2.transition {
+    opacity: 0.4;
+    transition: 0.5s all ease;
+}
+
+.sec3 {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.sec3.transition {
+    opacity: 0.4;
+    transition: 0.5s all ease;
+}
+
+.sec4 {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.sec4.transition {
+    opacity: 0.4;
+    transition: 0.5s all ease;
+}
+
+.sec5 {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.sec5.transition {
+    opacity: 0.4;
+    transition: 0.5s all ease;
+}
+
+.sec6 {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.sec6.transition {
+    opacity: 0.4;
+    transition: 0.5s all ease;
+}
+
+.sec7 {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.sec7.transition {
+    opacity: 0.4;
+    transition: 0.5s all ease;
+}

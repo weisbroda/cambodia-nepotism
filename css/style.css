@@ -1,0 +1,280 @@
+.interactive-graphic > iframe {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .g-lazy {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .g-lazy.ll-init {
+    -webkit-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+  }
+
+  .g-lazy.ll-loaded {
+    opacity: 1;
+  }
+
+  .g-clearfix {
+    clear: both;
+  }
+  .g-clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .g-graphic-container {
+    margin-bottom: 40px;
+  }
+  .g-zero-top .g-item-ai2html {
+    margin-top: 0;
+  }
+  #universe-chart-wrapper {
+    position: relative;
+  }
+  .universe-chart {
+    width: 100%;
+    min-height: 200px;
+  }
+  #universe-text {
+    display: block;
+    margin-bottom: 18px;
+  }
+  #universe-chart-wrapper .chart-note,
+  .g-label span {
+    font-family: "Noto Sans Serif", arial, helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    margin-top: 16px;
+  }
+  #universe-chart-wrapper .chart-note {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+  .g-label span {
+    display: block;
+    position: relative;
+    margin-top: 12px;
+  }
+  .viewport-medium .g-label span span {
+    display: inline;
+  }
+  .g-label span span {
+    display: inline-block;
+    margin-right: auto;
+    width: auto;
+    margin-top: 0px;
+    margin-left: 16px;
+    padding-left: 14px;
+  }
+
+  p.interactive-leadin.summary {
+    position: relative;
+    text-align: center;
+    font-family: "Noto Sans Serif", arial, sans-serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #777;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+  }
+  p.interactive-leadin.summary:after {
+    content: "↓";
+    display: inline-block;
+    padding-right: 16px;
+    font-size: 12px;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+  }
+  .g-mobile .g-item-content-wrapper,
+  .g-mobile .g-item-content-wrapper {
+    padding-top: calc(100% + 80px);
+  }
+  .g-fixedstate-post .g-fixed-graphic {
+    overflow: hidden;
+  }
+  .g-fixed-graphic canvas {
+    margin: 0 auto;
+  }
+  .g-item .g-item-content-wrapper.tallpage {
+    padding-top: calc(70% + 120px);
+  }
+  .g-copy.tallpage {
+    margin-top: -5%;
+  }
+  .g-copy.tallerpage {
+    margin-top: -15%;
+  }
+  .language-links {
+    margin: 15px 0;
+    font-size: 13px;
+    line-height: 0;
+    font-weight: 300;
+    color: #ccc;
+  }
+  .language-links a {
+    font-family: "Noto Sans Serif", arial, helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 0;
+    font-weight: 500;
+    padding: 0 4px;
+  }
+
+  .g-graphic-container {
+    position: relative;
+  }
+  .story-header.interactive-header {
+    position: relative;
+    z-index: 10;
+  }
+  .g-fixed-graphic {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    max-width: 120%;
+    width: 120%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .g-fixedstate-post .g-fixed-graphic {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+  }
+  .g-fixedstate-fixed .g-fixed-graphic {
+    -webkit-transform: translateZ(0px);
+    /* -webkit-backface-visibility: hidden; */
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .g-item {
+    position: relative;
+    margin: 0 auto;
+    max-width: 720px;
+    min-height: 90vh;
+    z-index: 2;
+  }
+  .g-item .g-item-content-wrapper {
+    width: 100%;
+    /* spacing between text boxes!! */
+    padding-top: calc(30% + 400px);
+  }
+
+  .g-copy,
+  .story-footer,
+  #related-coverage {
+    max-width: calc(100% - 20px);
+    margin: 0px auto;
+  }
+  .g-copy {
+    margin-top: 64px;
+  }
+  .viewport-medium p.g-p {
+    max-width: 460px;
+    font: 200 17px/1.5 georgia, serif;
+  }
+  p.g-p {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 1.2em auto;
+    font: 200 16px/1.5 georgia, serif;
+  }
+  p.g-p.g-subhead {
+    font: 700 17px/20px "Noto Sans Serif", arial, sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .g-blurb p.g-p.g-subhead:first-child {
+    font: 700 1.2em/1.3em "Noto Sans Serif", arial, sans-serif;
+  }
+  .viewport-medium .g-label {
+    font-size: 21px;
+    max-width: 460px;
+  }
+  .g-label {
+    width: 36vw;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 18px;
+    border: 1px solid #d2d2d2;
+    box-shadow: -1px -1px 5px -1px rgba(0, 0, 0, 0.19),
+      1px 3px 5px 0px rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+    font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.32;
+    text-align: center;
+  }
+
+  .viewport-medium .story-header.interactive-header {
+    max-width: 460px;
+  }
+  .viewport-medium
+    .story-header.interactive-header
+    .story-heading.interactive-headline {
+    font-size: 2.25em;
+  }
+  .story-header.interactive-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 320px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 18px;
+    border: 1px solid #d2d2d2;
+    box-shadow: -1px -1px 5px -1px rgba(0, 0, 0, 0.19),
+      1px 3px 5px 0px rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+  }
+
+  @media screen and (max-width: 575px) {
+    .story-header.interactive-header {
+      top: 65%;
+    }
+  }
+  .story-header.interactive-header .story-heading.interactive-headline {
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .story-header.interactive-header .byline-dateline {
+    text-align: center;
+    font-family: "Noto Sans Serif", arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin: 0 auto;
+    color: #222222;
+  }
+  .story-header.interactive-header .byline-dateline .byline + .dateline {
+    color: #999;
+    padding-left: 6px;
+  }
+  .story-header.interactive-header .interactive-byline {
+    margin-bottom: 10px;
+  }

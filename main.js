@@ -1,5 +1,4 @@
 const graphicElem = document.querySelector(".graphic-element");
-const secTwoAnimation = document.getElementById("secTwoPanAnimation");
 
 const sec1 = document.querySelector(".sec1");
 const sec2 = document.querySelector(".sec2");
@@ -20,113 +19,123 @@ const text6 = document.getElementById("g-item-six");
 const text7 = document.getElementById("g-item-seven");
 const outro = document.getElementById("g-item-outro");
 
+// Define the scroll positions for each step
+const introScrollPos = intro.offsetTop;
+const step1ScrollPos = text1.offsetTop;
+const step2ScrollPos = text2.offsetTop;
+const step3ScrollPos = text3.offsetTop;
+const step4ScrollPos = text4.offsetTop;
+const step5ScrollPos = text5.offsetTop;
+const step6ScrollPos = text6.offsetTop;
+const step7ScrollPos = text7.offsetTop;
 
-function isInView(element, min, max) {
-  const position = element.getBoundingClientRect().top;
-  //console.log('position: ', position)
-  return position <= min && position >= max;
+// Define the resetSVGPosition function
+function resetSVGPosition() {
+  // Reset the SVG's position and scale to their initial values
+  graphicElem.style.transformOrigin = '0px -160px 0px';
+  graphicElem.style.transform = 'scale(1)';
 }
 
-function watchScroll() {
-  //initial transition
-  if (isInView(intro, 0, -100)) {
-    sec1.classList.add("transition");
-    sec2.classList.add("transition");
-    sec3.classList.add("transition");
-    sec4.classList.add("transition");
-    sec5.classList.add("transition");
-    sec6.classList.add("transition");
-    sec7.classList.add("transition");
+const sectionCenters = {};
+
+// Function to calculate and store the center of a section
+function calculateSectionCenter(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const rect = section.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    sectionCenters[sectionId] = { x: centerX, y: centerY };
   }
-
-  //remove initial transition
-  if (isInView(headline, 0, -100)) {
-    sec1.classList.remove("transition");
-    sec2.classList.remove("transition");
-    sec3.classList.remove("transition");
-    sec4.classList.remove("transition");
-    sec5.classList.remove("transition");
-    sec6.classList.remove("transition");
-    sec7.classList.remove("transition");
-  }
-
-  // initial zoom and end zoom out
-  if (isInView(text1, 50, -5550)) {
-    graphicElem.classList.add("zoom");
-  } else {
-    graphicElem.classList.remove("zoom");
-  }
-
-  // section 1 highlight, sections 2–7 transition
-  if (isInView(text1, 50, -40)) {
-    sec1.classList.remove("transition");
-    sec2.classList.add("transition");
-    sec3.classList.add("transition");
-    sec4.classList.add("transition");
-    sec5.classList.add("transition");
-    sec6.classList.add("transition");
-    sec7.classList.add("transition");
-
-  }
-  // section 2 highlight, sections 1,3–7 transition
-    if (isInView(text2, -40, -800)) {
-      console.log("Text2 is in view. Starting SVG animation.");
-      sec1.classList.add("transition");
-      sec2.classList.remove("transition");
-      sec3.classList.add("transition");
-      sec4.classList.add("transition");
-      sec5.classList.add("transition");
-      sec6.classList.add("transition");
-      sec7.classList.add("transition");
-      secTwoAnimation.beginElement();
-    } else {
-      console.log("Text2 is out of view. Pausing SVG animation.");
-      secTwoAnimation.endElement();
-    }
-
-     if (isInView(text3, -130, -140 )) {
-       sec1.classList.add("transition");
-       sec2.classList.add("transition");
-       sec3.classList.remove("transition");
-       sec4.classList.add("transition");
-       sec5.classList.add("transition");
-       sec6.classList.add("transition");
-       sec7.classList.add("transition");
-
-     }
-
-     if (isInView(text4, -140, -310 )) {
-      sec1.classList.add("transition");
-      sec2.classList.add("transition");
-      sec3.classList.add("transition");
-      sec4.classList.remove("transition");
-      sec5.classList.add("transition");
-      sec6.classList.add("transition");
-      sec7.classList.add("transition");
-
-    }
-
 }
 
-window.addEventListener("scroll", watchScroll);
+// Call the function for each section
+calculateSectionCenter('sec1');
+calculateSectionCenter('sec2');
+calculateSectionCenter('sec3');
+calculateSectionCenter('sec4');
+calculateSectionCenter('sec5');
+calculateSectionCenter('sec6');
+calculateSectionCenter('sec7');
+// Call for other sections as needed
 
-// Section 1: 377 x 160
-// Section 2: 247 x 129
-// Section 3: 223 x 267
-// Section 4: 302 x 406
-// Section 5: 433 x 267
-// Section 6: 461 x 149
-// Section 7: full width (375 x 239??)
-
-// TO GET COORDINATES ON CLICK IN CONSOLE:
-function printMousePos(event) {
-  console.log(    "clientX: " + event.clientX +
-  " - clientY: " + event.clientY)
+// Function to center the SVG on a specific point within the SVG
+function centerOnPoint(section) {
+  const center = sectionCenters[section];
+  if (center) {
+    const x = -center.x + window.innerWidth / 2; // Adjust for horizontal centering
+    const y = -center.y + window.innerHeight / 2; // Adjust for vertical centering
+    graphicElem.style.transform = `translate(${x}px, ${y}px)`;
+  }
 }
-document.addEventListener("click", printMousePos);
 
-// for (let i = 0; i < zooms.length; i++) {
-//   const windowHeight = window.innerHeight;
-//   const elementTop = zooms[i].getBoundingClientRect().top;
-//   const elementVisible = 800;
-// }
+// Function to handle the scroll event
+function handleScroll() {
+  const scrollPos = window.scrollY;
+
+  // Step 1: Intro
+  if (scrollPos < step1ScrollPos) {
+    // Implement intro animation
+    graphicElem.style.opacity = "0.4";
+    resetSVGPosition();
+  }
+
+  // Step 2: g-item-one
+  else if (scrollPos < step2ScrollPos) {
+    // Implement step 2 animation
+    graphicElem.style.opacity = "1";
+    centerOnPoint('sec1');
+  }
+
+  // Step 3: g-item-two
+  else if (scrollPos < step3ScrollPos) {
+    // Implement step 3 animation
+    sec1.style.opacity = "0.4";
+    sec2.style.opacity = "1";
+    centerOnPoint('sec2');
+  }
+
+  // Step 4: g-item-three
+  else if (scrollPos < step4ScrollPos) {
+    // Implement step 4 animation
+    sec2.style.opacity = "0.4";
+    sec3.style.opacity = "1";
+    centerOnPoint('sec3');
+  }
+
+  // Step 5: g-item-four
+  else if (scrollPos < step5ScrollPos) {
+    // Implement step 4 animation
+    sec3.style.opacity = "0.4";
+    sec4.style.opacity = "1";
+    centerOnPoint('sec4');
+  }
+
+  // Step 6: g-item-five
+  else if (scrollPos < step6ScrollPos) {
+    // Implement step 6 animation
+    sec4.style.opacity = "0.4";
+    sec5.style.opacity = "1";
+    centerOnPoint('sec5');
+  }
+
+  // Step 7: g-item-six
+  else if (scrollPos < step7ScrollPos) {
+    // Implement step 7 animation
+    sec5.style.opacity = "0.4";
+    sec6.style.opacity = "1";
+    centerOnPoint('sec6');
+  }
+
+  // Step 8: g-item-seven
+  else {
+    // Implement step 8 animation
+    sec6.style.opacity = "0.4";
+    sec7.style.opacity = "1";
+    resetSVGPosition();
+  }
+}
+
+// Add a scroll event listener to trigger animations on scroll
+window.addEventListener("scroll", handleScroll);
